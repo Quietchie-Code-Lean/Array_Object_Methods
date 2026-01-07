@@ -14,12 +14,26 @@ btnAddGuest.addEventListener(`click`, ()=>{
     let HTMLcontent = "";
 
     guests.forEach((guest) =>{
-        HTMLcontent += `<li> ID guest: ${guest.id} Name: ${guest.name}</li>`;
+        HTMLcontent += `<li> ID guest: ${guest.id} Name: ${guest.name}<button onclick="DeleteGuest(${guest.id})" class="btnDelete">Delete</button></li>`;
     });
 
     guestList.innerHTML = HTMLcontent;
 
 });
+
+function DeleteGuest(id){
+    const index = guests.findIndex((element) => element.id == id)
+    guests.splice(index, 1)
+
+    let HTMLcontent = "";
+
+    for(let guest of guests){
+        HTMLcontent += `<li> ID guest: ${guest.id} Name: ${guest.name}<button onclick="DeleteGuest(${guest.id})" class="btnDelete">Delete</button></li>`;
+    };
+
+
+    guestList.innerHTML = HTMLcontent;
+};
 
 
 /* ------ TODO LIST ------ */

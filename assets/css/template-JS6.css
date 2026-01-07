@@ -163,6 +163,21 @@ code {
     white-space: pre; 
 }
 
+.btnDelete {
+    margin-top: 0.8rem;
+    padding: 0.5rem 0.5rem;
+    background: #7A1025;
+    color: #0f172a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 1s ease;
+}
+
+.btnDelete:hover {
+    background: #E5DCC5;
+}
 
 .btn {
     margin-top: 0.8rem;
