@@ -35,10 +35,20 @@ function renderRow(products){
                             <td>${product.name}</td>
                             <td>${product.price}</td>
                         </tr>`;
-        
     });
 
     tableBody.innerHTML = HTMLcontent;
 }
 
 renderRow(products);
+
+btnSearch.addEventListener(`click`, () =>{
+    const checkValue = inputSearch.value;
+
+    const filteredProducts = products.filter(
+        (product) => product.price >= checkValue
+    );
+
+renderRow(filteredProducts)
+
+});
