@@ -49,6 +49,6 @@ btnSearch.addEventListener(`click`, () =>{
         (product) => product.price >= checkValue
     );
 
-renderRow(filteredProducts)
+renderRow(filteredProducts);
 
 });
